@@ -4,6 +4,7 @@ import { ProductImage } from 'components/Product/ProductImage';
 import { ProductMetaInfo } from 'components/Product/ProductMetaInfo';
 
 import 'assets/Product/Product-Card.scss';
+import { ProductActions } from './ProductActions';
 
 export function ProductCard(props) {
     return (
@@ -16,6 +17,7 @@ export function ProductCard(props) {
                         <ProductMetaInfo />
                     </a>
                 </Card>
+                <ProductActions />
             </div>
         </div>
     );

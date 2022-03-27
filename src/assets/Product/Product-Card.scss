@@ -12,9 +12,13 @@
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     margin: 0 10px 30px;
+    position: relative;
 
     &:hover {
         box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.08), 0px 3px 4px rgba(0, 0, 0, 0.1), 0px 1px 4px -1px rgba(0, 0, 0, 0.1);
+        .product-actions {
+            display: block;
+        }
     }
 
     .p-card {
@@ -110,5 +114,49 @@
         font-weight: 400;
         font-size: 12px;
         margin-left: 5px;
+    }
+
+    .product-actions {
+        width: 100%;
+        display: none;
+        z-index: 3;
+        bottom: 20px;
+        position: absolute;
+        padding: 16px 10px;
+        background-color: var(--surface-0);
+
+        .product-wishlistFlex {
+            width: 100%;
+
+            &.product-wishlist {
+                width: 100%;
+
+                &.product-actionsButton {
+                    width: 100%;
+                    letter-spacing: 0.3px;
+
+                    .p-button-outlined {
+                        width: 100%;
+                        border-radius: 2px;
+                        font-size: 12px;
+                        padding: 8px;
+                        outline: none;
+                        box-shadow: none;
+
+                        .p-button-label {
+                            display: flex;
+                            flex-shrink: 1;
+                            flex-direction: row;
+                            justify-content: left;
+                        }
+
+                        .p-button-icon {
+                            margin-left: 30%;
+                            vertical-align: middle;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
