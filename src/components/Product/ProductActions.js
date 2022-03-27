@@ -7,8 +7,8 @@ export function ProductActions(props) {
             <span
                 className="product-wishlistFlex product-actionsButton product-wishlist">
                 <Button
-                    icon="pi pi-heart-fill" iconPos="left"
-                    label="wishlist" className="p-button-outlined" />
+                    icon="pi pi-shopping-cart" iconPos="left"
+                    label="ADD TO CART" className="p-button-outlined" />
             </span>
 
         </div>
