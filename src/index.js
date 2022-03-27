@@ -1,11 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { ProductCard } from "./components/Product/ProductCard.js";
+
+import App from "Home.js";
 
 
 ReactDOM.render(
   <React.StrictMode>
-    <ProductCard />
+    <App />
   </React.StrictMode>,
   document.getElementById("root")
 );

@@ -2,7 +2,18 @@
 @import "primereact/resources/primereact.min.css";
 @import "primeicons/primeicons.css";
 
-.product-base {
+.result-base {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    align-content: stretch;
+    list-style: none;
+}
+
+.results-liDummy {
     width: 210px;
     text-align: left;
     position: relative;
@@ -12,10 +23,22 @@
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     margin: 0 10px 30px;
+}
+
+.product-base {
+    width: 210px;
+    text-align: left;
     position: relative;
+    overflow: hidden;
+    vertical-align: top;
+    display: inline-block;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0 10px 30px;
 
     &:hover {
         box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.08), 0px 3px 4px rgba(0, 0, 0, 0.1), 0px 1px 4px -1px rgba(0, 0, 0, 0.1);
+
         .product-actions {
             display: block;
         }
@@ -52,25 +75,25 @@
     }
 
     .product-productMetaInfo {
-        position: relative;
-        z-index: 3;
-        background: var(--surface-0);
-        padding: 0 10px;
         height: 100%;
+        z-index: 3;
+        padding: 0 10px;
         margin-top: 12px;
+        background: var(--surface-0);
+        position: relative;
         -webkit-box-sizing: border-box;
         box-sizing: border-box;
         overflow: hidden;
     }
 
     .product-brand {
-        margin-top: inherit;
-        -webkit-margin-before: initial;
-        margin-block-start: 0;
         font-size: 16px;
         font-weight: bold; //500
         line-height: 1;
+        margin-top: inherit;
         margin-bottom: 6px;
+        -webkit-margin-before: initial;
+        margin-block-start: 0;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
@@ -119,7 +142,7 @@
     .product-actions {
         width: 100%;
         display: none;
-        z-index: 3;
+        z-index: 4;
         bottom: 20px;
         position: absolute;
         padding: 16px 10px;
@@ -142,20 +165,6 @@
                         padding: 8px;
                         outline: none;
                         box-shadow: none;
-
-                        /*.p-button-label {
-                            display: flex;
-                            flex-shrink: 1;
-                            flex-direction: row;
-                            justify-content: left;
-                        }
-
-                        .p-button-icon {
-                            display: flex;
-                            flex-shrink: 1;
-                            flex-direction: row;
-                            justify-content: left;
-                        }*/
                     }
                 }
             }

@@ -1,11 +1,16 @@
-import 'primereact/resources/themes/lara-light-indigo/theme.css';
-import 'primereact/resources/primereact.min.css';
-import 'primeicons/primeicons.css';
+import { ProductCard } from 'components/Product/ProductCard';
+
+import 'primeflex/primeflex.css';
 
 export default function App() {
     return (
-        <div>
-            <p>hello world</p>
-        </div>
+        <ul className='result-base'>
+            <li><ProductCard /></li>
+            <li><ProductCard /></li>
+            <li><ProductCard /></li>
+            <li><ProductCard /></li>
+            <li><ProductCard /></li>
+            <li class="results-liDummy"></li>
+        </ul>
     );
 }
